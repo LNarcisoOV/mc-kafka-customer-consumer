@@ -7,12 +7,12 @@ import com.mc.util.Constants;
 @Service
 public class KafkaCustomerConsumerServiceImpl {
 
-    @KafkaListener(topics= {Constants.CUSTOMER_TOPIC_NAME})
+    @KafkaListener(topics= {Constants.CUSTOMER_TOPIC_NAME}, groupId = "groupId")
     public void customerConsumer(String payload) {
         payload.toString();
     }
     
-    @KafkaListener(topics= {Constants.ADDRESS_TOPIC_NAME})
+    @KafkaListener(topics= {Constants.ADDRESS_TOPIC_NAME}, groupId = "groupId")
     public void addressConsumer(String payload) {
         payload.toString();
     }
