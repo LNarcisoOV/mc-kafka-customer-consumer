@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Address {
 	
 	@Id
-	private Long addressId;
+	private String addressId;
 	
 	private Customer customer;
 	
@@ -22,11 +22,11 @@ public class Address {
 
 	private String zipCode;
 
-	public Long getAddressId() {
+	public String getAddressId() {
 		return addressId;
 	}
 
-	public void setAddressId(Long addressId) {
+	public void setAddressId(String addressId) {
 		this.addressId = addressId;
 	}
 

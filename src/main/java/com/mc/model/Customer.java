@@ -8,17 +8,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Customer {
 	
 	@Id
-	private Long customerId;
+	private String customerId;
 	
 	private String name;
 	
 	private String lastName;
 	
-	public Long getCustomerId() {
+	public String getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(Long customerId) {
+	public void setCustomerId(String customerId) {
 		this.customerId = customerId;
 	}
 
