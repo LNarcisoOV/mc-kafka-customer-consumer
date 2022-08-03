@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @EnableEurekaClient
 @EnableDiscoveryClient
 @SpringBootApplication
-@EnableMongoRepositories(basePackages = "com.mc.service")
+@EnableMongoRepositories(basePackages = "com.mc.repository")
 public class McKafkaCustomerConsumerApplication {
 
 	public static void main(String[] args) {

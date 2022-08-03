@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.google.gson.Gson;
 import com.mc.model.Address;
 import com.mc.model.Customer;
+import com.mc.repository.AddressRepository;
+import com.mc.repository.CustomerRepository;
 import com.mc.util.Constants;
 
 @Service
@@ -16,10 +18,10 @@ public class KafkaCustomerConsumerServiceImpl {
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaCustomerConsumerServiceImpl.class);
     
     @Autowired
-    private CustomerService customerService;
+    private CustomerRepository customerService;
     
     @Autowired
-    private AddressService addressService;
+    private AddressRepository addressService;
 
     @KafkaListener(topics= {Constants.CUSTOMER_TOPIC_NAME}, groupId = "groupId")
     public void customerConsumer(String payload) {
